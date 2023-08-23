@@ -7,40 +7,42 @@ function Profile() {
   return (
     <>
       <section id="profile">
-        <div class="section__pic-container">
-          <img src={ProfilePicture} alt="Amma Alibrahim profile picture" />
+        <div className="section__pic-container">
+          <img src={ProfilePicture} alt="Profile" />
         </div>
-        <div class="section__text">
-          <p class="section__text__p1">Hello, I'm</p>
-          <h1 class="title"> Alibrahim</h1>
-          <p class="section__text__p2">Frontend Developer</p>
-          <div class="btn-container">
+        <div className="section__text">
+          <p className="section__text__p1">Hello, I'm</p>
+          <h1 className="title"> Alibrahim</h1>
+          <p className="section__text__p2">Frontend Developer</p>
+          <div className="btn-container">
             <button
-              class="btn btn-color-2"
-              onclick="window.open('./assets/resume-example.pdf')"
+              className="btn btn-color-2"
+              onClick={() => window.open('./assets/resume-example.pdf')}
             >
               Download CV
             </button>
             <button
-              class="btn btn-color-1"
-              onclick="location.href='./#contact'"
+              className="btn btn-color-1"
+              onClick={() => (window.location.href = './#contact')}
             >
               Contact Info
             </button>
           </div>
           <div id="socials-container">
-            <img
-              src={Linkedin}
-              alt="My LinkedIn profile"
-              class="icon"
-              onclick="location.href='https://linkedin.com/'"
-            />
-            <img
-              src={Github}
-              alt="My Github profile"
-              class="icon"
-              onclick="location.href='https://github.com/'"
-            />
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <img
+                src={Linkedin}
+                alt="LinkedIn Profile"
+                className="icon"
+              />
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <img
+                src={Github}
+                alt="Github Profile"
+                className="icon"
+              />
+            </a>
           </div>
         </div>
       </section>
