@@ -1,39 +1,39 @@
 import React from "react";
 import AboutPicture from "./images/about-pic.png";
-import Expreience from "./images/experience.png";
+import Experience from "./images/experience.png";
 import Education from "./images/education.png";
 
 function About() {
   return (
     <>
       <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-          <div class="section__pic-container">
-            <img src={AboutPicture} alt="Profile" class="about-pic" />
+        <p className="section__text__p1">Get To Know More</p>
+        <h1 className="title">About Me</h1>
+        <div className="section-container">
+          <div className="section__pic-container">
+          <img src={AboutPicture} alt="Profile" className="about-pic" />
           </div>
-          <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
-                <img src={Expreience} alt="Experience" class="icon" />
+          <div className="about-details-container">
+            <div className="about-containers">
+              <div className="details-container">
+              <img src={Experience} alt="Experience Icon" className="icon" />
                 <h3>Experience</h3>
                 <p>
                   2+ years <br />
                   Frontend & Backend Development
                 </p>
               </div>
-              <div class="details-container">
-                <img src={Education} alt="Education" class="icon" />
+              <div className="details-container">
+              <img src={Education} alt="Education Icon" className="icon" />
                 <h3>Education</h3>
                 <p>
-                  B.Sc. Bachelors Degree
+                  B.Sc. Bachelor's Degree
                   <br />
-                  M.Sc. Masters Degree
+                  M.Sc. Master's Degree
                 </p>
               </div>
             </div>
-            <div class="text-container">
+            <div className="text-container">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                 quis reprehenderit et laborum, rem, dolore eum quod voluptate
