@@ -3,7 +3,6 @@ import AboutPicture from "./images/about-pic.png";
 import Experience from "./images/experience.png";
 import Education from "./images/education.png";
 import mp3 from './images/my.mp3'
-import { useState } from "react";
 
 function About() {
 
