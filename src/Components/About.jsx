@@ -11,12 +11,12 @@ function About() {
         <h1 class="title">About Me</h1>
         <div class="section-container">
           <div class="section__pic-container">
-            <img src={AboutPicture} alt="Profile picture" class="about-pic" />
+            <img src={AboutPicture} alt="Profile" class="about-pic" />
           </div>
           <div class="about-details-container">
             <div class="about-containers">
               <div class="details-container">
-                <img src={Expreience} alt="Experience icon" class="icon" />
+                <img src={Expreience} alt="Experience" class="icon" />
                 <h3>Experience</h3>
                 <p>
                   2+ years <br />
@@ -24,7 +24,7 @@ function About() {
                 </p>
               </div>
               <div class="details-container">
-                <img src={Education} alt="Education icon" class="icon" />
+                <img src={Education} alt="Education" class="icon" />
                 <h3>Education</h3>
                 <p>
                   B.Sc. Bachelors Degree
