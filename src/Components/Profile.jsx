@@ -1,25 +1,24 @@
 import React from "react";
-import ProfilePicture from "./images/profile-pic.png";
-import Linkedin from "./images/linkedin.png";
-import Github from "./images/github.png";
+import heroBG from "../Components/images/hero-bg.png"
+
 
 function Profile() {
   return (
     <>
       <section id="profile">
+      
         <div className="section__pic-container">
-          <img src={ProfilePicture} alt="Profile" />
+          <img src={heroBG}  alt="herobg"/>
         </div>
         <div className="section__text">
-          <p className="section__text__p1">Hello, I'm</p>
-          <h1 className="title">Ammar Alibrahim</h1>
-          <p className="section__text__p2">Frontend Developer</p>
+          <p className="section__text__p1">Welcome</p>
+          <h1 className="title"><span>Reyhana</span> Perfumes</h1>
+          <p className="section__text__p2">A Unique Perfume Experience</p>
           <div className="btn-container">
             <button
               className="btn btn-color-2"
-              onClick={() => window.open('./assets/resume-example.pdf')}
             >
-              Download CV
+              Product List
             </button>
             <button
               className="btn btn-color-1"
@@ -28,22 +27,7 @@ function Profile() {
               Contact Info
             </button>
           </div>
-          <div id="socials-container">
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src={Linkedin}
-                alt="LinkedIn Profile"
-                className="icon"
-              />
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src={Github}
-                alt="Github Profile"
-                className="icon"
-              />
-            </a>
-          </div>
+         
         </div>
       </section>
     </>

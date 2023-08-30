@@ -41,9 +41,9 @@ nav {
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 4rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 a {
@@ -60,11 +60,12 @@ a:hover {
 }
 
 .logo {
-  font-size: 2rem;
+height:90px ;
+transition: 0.5s;
 }
 
 .logo:hover {
-  cursor: default;
+  transform: scale(1.1);
 }
 
 /* HAMBURGER MENU */
@@ -172,9 +173,13 @@ section {
 
 .section__pic-container {
   display: flex;
+  position: relative;
+  right: 20%;
   height: 500px;
   width: 400px;
   margin: auto 0;
+  transition: 0.3s;
+  
 }
 
 .section__text {
@@ -187,6 +192,7 @@ section {
 }
 
 .section__text__p1 {
+  font-size: 20px;
   text-align: center;
 }
 
@@ -198,12 +204,18 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+
+}
+.title span{
+  font-size: 3rem;
+  text-align: center;
+  color: #207780;
 }
 
 #socials-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2px;
   gap: 1rem;
 }
 .play{
@@ -219,7 +231,7 @@ section {
 }
 .icon {
   cursor: pointer;
-  height: 2rem;
+  height: 1.2rem;
 }
 
 /* BUTTONS */
@@ -234,36 +246,103 @@ section {
   font-weight: 600;
   transition: all 300ms ease;
   padding: 1rem;
+  color: #fff;
   width: 8rem;
   border-radius: 2rem;
+  background-image: linear-gradient(to right, #BCECF0 , black);
+
+
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card_image img {
+  max-width: 100%; /* Resmin maksimum genişliği yüzde olarak ayarlandı */
+  height: auto; /* Yükseklik orantılı olarak ayarlanacak */
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 31.2%;
+  }
+}
+@media (max-width: 500px) {
+  .cards_item {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 50px ;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background-color: #fff;
+  color: black;
+}
+
+.card_title {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #000000;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+.card_btn{
+  float: right;
 }
 
 .btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
+  background-image: linear-gradient(to right, #BCECF0 , black);
+
+  
 }
 
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
-}
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
-}
 
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
-}
+
 
 .btn-color-2 {
-  background: none;
-}
+  .btn-color-2 {
+    background: none;
+  }}
 
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
+
 }
 
 .btn-container {
@@ -335,6 +414,9 @@ section {
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
+.experience-sub-title span{
+  color: #B7E8ED;
+}
 
 .experience-details-container {
   display: flex;
@@ -377,6 +459,9 @@ article .icon {
   border-radius: 0.5rem;
   width: 90%;
   height: 90%;
+}
+.section__pic-container:hover{
+transform: scale(1.1);
 }
 
 .project-title {
@@ -438,4 +523,21 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .section__pic-container {
+    display: flex;
+    position: relative;
+    right:0%;
+    height: 500px;
+    width: 400px;
+    margin: auto 0;
+    
+  }
+  .card_image img {
+    width: 100%;
+    height: auto;
+  }
+  
 }
