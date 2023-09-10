@@ -15,11 +15,11 @@ function Profile() {
           <h1 className="title"><span>Reyhana</span> Perfumes</h1>
           <p className="section__text__p2">A Unique Perfume Experience</p>
           <div className="btn-container">
-            <button
+           <a href="/product-list"> <button
               className="btn btn-color-2"
             >
               Product List
-            </button>
+            </button></a>
             <button
               className="btn btn-color-1"
               onClick={() => (window.location.href = './#contact')}

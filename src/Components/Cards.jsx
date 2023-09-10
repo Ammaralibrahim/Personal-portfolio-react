@@ -1,14 +1,14 @@
 import React from "react";
-import product1 from "../Components/images/product-1.jpeg";
-import product2 from "../Components/images/product-2.jpeg";
-import product3 from "../Components/images/product-3.jpeg";
-import product4 from "../Components/images/product-4.jpeg";
-import product5 from "../Components/images/product-5.jpeg";
-import product6 from "../Components/images/product-6.jpeg";
-import product7 from "../Components/images/product-7.jpg";
-import product8 from "../Components/images/product-8.jpg";
-import product9 from "../Components/images/product-9.jpg";
-import product10 from "../Components/images/product-10.jpg";
+import product1 from "./images/product-1.jpeg";
+import product2 from "./images/product-2.jpeg";
+import product3 from "./images/product-3.jpeg";
+import product4 from "./images/product-4.jpeg";
+import product5 from "./images/product-5.jpeg";
+import product6 from "./images/product-6.jpeg";
+import product7 from "./images/product-7.jpg";
+import product8 from "./images/product-8.jpg";
+import product9 from "./images/product-9.jpg";
+import product10 from "./images/product-10.jpg";
 
 const products = [
   {
