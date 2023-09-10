@@ -10,7 +10,7 @@ export default function ProductList() {
 
   useEffect(() => {
     const field = document.querySelector(".items");
-    const li = Array.from(field.children);
+    Array.from(field.children);
 
     function FilterProduct() {
       this.run = function () {
@@ -48,25 +48,25 @@ export default function ProductList() {
               data-filter="الكل"
               className={selectedCategory === "الكل" ? "active" : ""}
             >
-              <a href="#">الكل</a>
+              <a href="ddd">الكل</a>
             </li>
             <li
               data-filter="النسائي"
               className={selectedCategory === "النسائي" ? "active" : ""}
             >
-              <a href="#">النسائي</a>
+              <a href="ddd">النسائي</a>
             </li>
             <li
               data-filter="الرجالي"
               className={selectedCategory === "الرجالي" ? "active" : ""}
             >
-              <a href="#">الرجالي</a>
+              <a href="ddd">الرجالي</a>
             </li>
             <li
               data-filter="الهدايا"
               className={selectedCategory === "الهدايا" ? "active" : ""}
             >
-              <a href="#">الهدايا</a>
+              <a href="ddd">الهدايا</a>
             </li>
           </ul>
         </header>
@@ -87,7 +87,7 @@ export default function ProductList() {
                 }}
               >
                 <div className="detail">
-                <img src={productsImage} className="products-image"/>
+                <img src={productsImage} className="products-image" alt="productsImage"/>
                   <strong>{product.title}</strong>
                 </div>
                 <h4>{product.price}</h4>
