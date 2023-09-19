@@ -4,8 +4,6 @@ import products from "./Components/productsData";
 import productsImage from "./Components/images/products-image.jpeg";
 
 export default function ProductList() {
- 
-
   const [selectedCategory, setSelectedCategory] = useState("الكل");
 
   useEffect(() => {
@@ -37,62 +35,85 @@ export default function ProductList() {
     النسائي: { backgroundColor: "lightpink" },
     الهدايا: {}, // Diğer kategoriler için stil belirtilmediyse varsayılan olarak boş bırakabilirsiniz.
   };
-
+  const [searchValue, setSearchValue] = useState("");
 
   return (
     <>
       <main>
         <header>
-        <ul className="indicator">
+          <ul className="indicator">
             <li
               data-filter="الكل"
               className={selectedCategory === "الكل" ? "active" : ""}
             >
-              <a href="ddd">الكل</a>
+              <p>الكل</p>
             </li>
             <li
               data-filter="النسائي"
               className={selectedCategory === "النسائي" ? "active" : ""}
             >
-              <a href="ddd">النسائي</a>
+              <p>النسائي</p>
             </li>
             <li
               data-filter="الرجالي"
               className={selectedCategory === "الرجالي" ? "active" : ""}
             >
-              <a href="ddd">الرجالي</a>
+              <p>الرجالي</p>
             </li>
             <li
               data-filter="الهدايا"
               className={selectedCategory === "الهدايا" ? "active" : ""}
             >
-              <a href="ddd">الهدايا</a>
+              <p>الهدايا</p>
             </li>
           </ul>
         </header>
         <div className="product-field">
+         <div className="filter-input-div">
+           <input
+            type="text"
+            className="filter-input"
+            placeholder="البحث حسب الأسم"
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
+         </div>
           <ul className="items">
-            {products.map((product, index) => (
-              <li
-                key={index}
-                data-category={product.category}
-                data-price={product.price}
-                style={{
-                  display:
-                    selectedCategory === "الكل" ||
-                    selectedCategory === product.category
-                      ? "block"
-                      : "none",
-                  ...categoryStyles[product.category], // Kategoriye göre arka plan rengini ekleyin
-                }}
-              >
-                <div className="detail">
-                <img src={productsImage} className="products-image" alt="productsImage"/>
-                  <strong>{product.title}</strong>
-                </div>
-                <h4>{product.price}</h4>
-              </li>
-            ))}
+            {products
+              .filter((product) =>
+                selectedCategory === "الكل"
+                  ? true
+                  : product.category === selectedCategory
+              )
+              .filter(
+                (product) =>
+                  searchValue === "" || product.title.includes(searchValue) // Değer boşsa veya başlığı içeriyorsa göster
+              )
+              .map((product, index) => (
+                <li
+                  key={index}
+                  data-category={product.category}
+                  data-price={product.price}
+                  style={{
+                    display:
+                      selectedCategory === "الكل" ||
+                      selectedCategory === product.category
+                        ? "block"
+                        : "none",
+                    ...categoryStyles[product.category],
+                  }}
+                >
+                  <div className="detail">
+                    <img
+                      src={productsImage}
+                      className="products-image"
+                      alt="productsImage"
+                    />
+                    <strong>{product.title}</strong>
+                  </div>
+                  <h4>{product.price}</h4>
+                </li>
+              ))}
           </ul>
         </div>
       </main>
