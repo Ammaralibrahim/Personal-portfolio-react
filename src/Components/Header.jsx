@@ -9,7 +9,7 @@ function Header() {
   return (
     <>
       <nav id="desktop-nav">
-        <div className="logo"></div>
+        <div className="logo">
           <Link to="/">
             <img src={Logo} alt="Reyhana logo" className="logo" />
           </Link>
