@@ -30,7 +30,7 @@ function Header() {
             <li>
               <div id="socials-container">
                 <a
-                  href="https://api.whatsapp.com/send?phone=+905383654262&text=هل يمكنني معرفة المزيد عن منتجاتكم؟"
+                  href="https://api.whatsapp.com/send?phone=+905383654262&text=Can I have more information about your products? Ürünleriniz hakkında daha fazla bilgi sahibi olabilirmiyim? هل يمكنني معرفة المزيد عن منتجاتكم؟"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
