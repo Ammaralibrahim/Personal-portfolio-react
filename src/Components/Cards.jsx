@@ -15,61 +15,71 @@ const products = [
     img: product1,
     title: "Product Name",
     text: "الطقم الدبلماسي الفاخر",
-    price: "100 ",
+    price: "300TL",
+    oldPrice: "350TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product2,
     title: "Product Name",
     text: "الفراشة دات الألوان الزاهية",
-    price: "50 ",
+    price: "300TL",
+    oldPrice: "350TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product3,
     title: "Product Name",
     text: "زجاجة العباءة الوان رجالية",
-    price: "30 ",
+    price: "250TL",
+    oldPrice: "200TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product4,
     title: "Products Name",
     text: "الزجاجة الكرستالية الفاخرة100 مل",
-    price: "80 ",
+    price: "350TL",
+    oldPrice: "400TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product5,
     title: "Product Name",
     text: "زجاجة العباءة الالوان النسائية",
-    price: "25 ",
+    price: "200TL",
+    oldPrice: "250TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product6,
     title: "Product Name",
     text: "الزجاجة الدبلماسية الوان مت 80 مل",
-    price: "70 ",
+    price: "300TL",
+    oldPrice: "350TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product7,
     title: "Product Name",
     text: "جرة الوالي الجديدة 40 مل",
-    price: "45 ",
+    price: "250TL",
+    oldPrice: "275TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product8,
     title: "Product Name",
     text: "طاقية الوان رجالي 50 مل",
-    price: "35 ",
+    price: "275TL",
+    oldPrice: "300TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product9,
     title: "Product Name",
     text: "الزجاجة المزخرفة العثمانية سعة 80 مل",
-    price: "60 ",
+    price: "300TL",
+    oldPrice: "300TL", // Eski fiyatı buraya ekleyin
   },
   {
     img: product10,
     title: "Product Name",
     text: "الزجاجة المزخرفة العثماني سعة 80",
-    price: "55 ",
+    price: "300TL",
+    oldPrice: "350TL", // Eski fiyatı buraya ekleyin
   },
 ];
 
@@ -88,9 +98,30 @@ function Cards() {
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">{product.title}</h2>
-                  <div >
-                  <p className="card_text">{product.text}</p>
-                  <p className="card_price">{product.price}</p>
+                  <div
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "left",
+                    }}
+                  >
+                    <p className="card_text">{product.text}</p>
+                   <div style={{display: "flex",gap: "15px",alignItems: "baseline", textAlign: "right"}}>
+                   <p
+                      className="card_old_price"
+                      style={{ textDecoration: "line-through", color: "gray" }}
+                    >
+                      {product.oldPrice}
+                    </p>
+                    <p
+                      className="card_price"
+                      style={{ textDecoration: "none", color: "black", fontWeight: "700" }}
+
+                    >
+                      {product.price}
+                    </p>
+                   </div>
                   </div>
                   <button className="btn card_btn">Read More</button>
                 </div>
