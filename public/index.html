@@ -14,6 +14,31 @@
     <title>عطورات ريحانة</title>
   </head>
   <body>
+    <style>
+      div.slide-left {
+        width:100%;
+        overflow:hidden;
+      }
+      div.slide-left p {
+        animation: slide-left 10s;
+      }
+      
+      @keyframes slide-left {
+        from {
+          margin-left: 100%;
+          width: 300%; 
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      </style>
+      
+      <div class="slide-left">
+      <p>Never fight an inanimate object.</p>
+      </div>
     <div id="root"></div>
     
   </body>
