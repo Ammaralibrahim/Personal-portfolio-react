@@ -15,30 +15,50 @@
   </head>
   <body>
     <style>
-      div.slide-left {
-        width:100%;
-        overflow:hidden;
-      }
-      div.slide-left p {
-        animation: slide-left 10s;
-      }
-      
-      @keyframes slide-left {
-        from {
-          margin-left: 100%;
-          width: 300%; 
-        }
-      
-        to {
-          margin-left: 0%;
-          width: 100%;
-        }
-      }
-      </style>
-      
-      <div class="slide-left">
-      <p>Never fight an inanimate object.</p>
+      .marquee-container {
+  height: 30px;
+  overflow: hidden;
+  line-height: 30px;
+  position: relative; /* Agregamos esta línea para que .marquee se posicione correctamente */
+
+  .marquee {
+    top: 0;
+    left: -100%; /* Cambiamos el valor inicial de 'left' a -100% */
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee2 {
+    animation-delay: 15s;
+  }
+  b {
+    padding-left: 10px;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: -100%; /* Cambiamos el valor inicial de 'left' a -100% */
+  }
+  100% {
+    left: 100%; /* Cambiamos el valor final de 'left' a 100% */
+  }
+}
+
+    </style>
+    <div class="position-relative marquee-container d-none d-sm-block">
+      <div class="marquee d-flex justify-content-around">
+        <span>"في ريحانة للعطورات، نقدم لكم عروضًا استثنائية على أجمل العطور ومنتجات العناية العطرية. ولجعل تجربتكم مميزة، نقدم خدمة توصيل مجانية إلى باب منزلكم. لا تفوتوا الفرصة وقوموا بالتسوق الآن للاستمتاع بعبير رائع وتوصيل مجاني!</span>
+    
       </div>
+      <div class="marquee marquee2 d-flex justify-content-around">
+        <span>يمكنك التواصل معنا من خلال الواتس اب للطلبات</span>
+        
+      </div>
+    </div>
     <div id="root"></div>
     
   </body>
